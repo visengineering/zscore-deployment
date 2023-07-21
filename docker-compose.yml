@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  universe_frontend:
+    build: ../universe-frontend
+    image: universe-frontend:1.0.0
+    ports:
+      - "4200:80"
+    environment:
+      - ANGULAR_API_URL="http://localhost:3000"
+
+  universe_backend:
+    build: ../universe-backend
+    image: universe-backend:1.0.0
+    ports:
+      - "3000:3000"
+    environment:
+      - SSH_TUNNEL_HOST=warehouse.sagaciresearch.com
+      - SSH_TUNNEL_USER_NAME=external
+      - SSH_TUNNEL_PASSWORD='7dawkjdf!"//dhjsad'
+      - SSH_TUNNEL_PORT=22
+      - DATABASE_PORT=5432
+      - DATABASE_USER_NAME=universe_demo
+      - DATABASE_PASSWORD=fiuasd88ZXC//76sdf
+      - DATABASE_HOST_NAME=localhost
+      - DATABASE_NAME=postgres
+      - RE_CONNECT_TUNNEL_INTERVAL=6000
+      - ASSIGNED_DATABASE_PORT=5433
