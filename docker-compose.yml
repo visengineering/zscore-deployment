@@ -15,13 +15,13 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - SSH_TUNNEL_HOST=warehouse.sagaciresearch.com
-      - SSH_TUNNEL_USER_NAME=external
-      - SSH_TUNNEL_PASSWORD='7dawkjdf!"//dhjsad'
+      - SSH_TUNNEL_HOST="localhost"
+      - SSH_TUNNEL_USER_NAME="sdf"
+      - SSH_TUNNEL_PASSWORD='123!"//dhjsad'
       - SSH_TUNNEL_PORT=22
       - DATABASE_PORT=5432
-      - DATABASE_USER_NAME=universe_demo
-      - DATABASE_PASSWORD=fiuasd88ZXC//76sdf
+      - DATABASE_USER_NAME="username"
+      - DATABASE_PASSWORD="123C"//76sdf
       - DATABASE_HOST_NAME=localhost
       - DATABASE_NAME=postgres
       - RE_CONNECT_TUNNEL_INTERVAL=6000
